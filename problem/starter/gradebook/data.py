@@ -19,3 +19,9 @@ RECORDS: list[dict] = [
     {"name": "Diana",   "subject": "Science", "score": 70},
     {"name": "Diana",   "subject": "English", "score": 65},
 ]
+def subjects_offered(records: list[dict]) -> set[str]:
+    unique_subjects = set()
+    for record in records:
+        if "subject" in record:
+            unique_subjects.add(record["subject"])
+    return unique_subjects
